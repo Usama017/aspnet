@@ -13,7 +13,8 @@ pipeline {
             steps {
 		  
                   echo "building application version ${params.CHOICE}"
-		              sh 'dotnet restore'
+		  sh 'dotnet clean '
+		  sh 'dotnet build'
                   sh 'dotnet publish'
 		    
          }                        
