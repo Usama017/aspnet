@@ -13,8 +13,8 @@ pipeline {
             steps {
 		  
                   echo "building application version ${params.CHOICE}"
-		  sh 'dotnet clean '
-		  sh 'dotnet build'
+		  sh 'dotnet clean src/aspnetapp.sln '
+		  sh 'dotnet build src/aspnetapp.sln'
                   sh 'dotnet publish'
 		    
          }                        
