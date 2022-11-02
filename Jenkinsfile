@@ -15,7 +15,7 @@ pipeline {
                   echo "building application version ${params.CHOICE}"
 		  sh 'dotnet clean src/aspnetapp.sln '
 		  sh 'dotnet build src/aspnetapp.sln --configuration Release'
-                  sh 'dotnet publish'
+                 
 		    
          }                        
       }
